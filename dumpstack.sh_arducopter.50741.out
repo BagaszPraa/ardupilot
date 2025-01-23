@@ -1,0 +1,80 @@
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007fd3a82fb3ea in __GI___wait4 (pid=50742, stat_loc=stat_loc@entry=0x7fff28538fa8, options=options@entry=0, usage=usage@entry=0x0) at ../sysdeps/unix/sysv/linux/wait4.c:30
+30	../sysdeps/unix/sysv/linux/wait4.c: No such file or directory.
+#0  0x00007fd3a82fb3ea in __GI___wait4 (pid=50742, stat_loc=stat_loc@entry=0x7fff28538fa8, options=options@entry=0, usage=usage@entry=0x0) at ../sysdeps/unix/sysv/linux/wait4.c:30
+        sc_ret = -512
+        sc_ret = <optimized out>
+#1  0x00007fd3a82fb3ab in __GI___waitpid (pid=<optimized out>, stat_loc=stat_loc@entry=0x7fff28538fa8, options=options@entry=0) at ./posix/waitpid.c:38
+No locals.
+#2  0x00007fd3a8261bdb in do_system (line=<optimized out>) at ../sysdeps/posix/system.c:171
+        __result = <optimized out>
+        _cleanup_start_doit = true
+        _buffer = {__routine = 0x7fd3a8261c60 <cancel_handler>, __arg = 0x7fff28538fb0, __canceltype = 0, __prev = 0x0}
+        _cleanup_routine = 0x7fd3a8261c60 <cancel_handler>
+        cancel_args = {quit = 0x7fd3a842d7a0 <quit>, intr = 0x7fd3a842d840 <intr>, pid = 50742}
+        status = -1
+        ret = 0
+        pid = 50742
+        sa = {__sigaction_handler = {sa_handler = 0x1, sa_sigaction = 0x1}, sa_mask = {__val = {65536, 0, 0, 0, 0, 0, 0, 0, 0, 2141192192, 0, 18446744073709551615, 0, 18446744073709551615, 0, 18446744073709551615}}, sa_flags = 0, sa_restorer = 0x7fa00000ffffffff}
+        omask = {__val = {0, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 140733869954304, 3545519486840051143, 11891485935630518272, 140733869954304, 2}}
+        reset = {__val = {6, 199, 140733869953232, 94861302772297, 140733869953616, 140547036124314, 140733869953632, 140733869953472, 140737415839745, 140733869954304, 140733869954304, 140733869954304, 140733869954304, 140733869954379, 140733869954503, 140733869954304}}
+        spawn_attr = {__flags = 12, __pgrp = 0, __sd = {__val = {6, 199, 140733869953232, 94861302772297, 140733869953616, 140547036124314, 140733869953632, 140733869953472, 140737415839745, 140733869954304, 140733869954304, 140733869954304, 140733869954304, 140733869954379, 140733869954503, 140733869954304}}, __ss = {__val = {0, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 140733869954304, 3545519486840051143, 11891485935630518272, 140733869954304, 2}}, __sp = {sched_priority = 0}, __policy = 0, __pad = {0 <repeats 16 times>}}
+#3  0x000056469e2e298d in AP_HAL::run_command_on_ownpid(char const*) ()
+No symbol table info available.
+#4  0x000056469e2e2c96 in AP_HAL::panic(char const*, ...) ()
+No symbol table info available.
+#5  0x000056469e1ef33d in AP_Param::reload_defaults_file(bool) ()
+No symbol table info available.
+#6  0x000056469e1ef365 in AP_Param::load_all() ()
+No symbol table info available.
+#7  0x000056469e13775f in Copter::load_parameters() ()
+No symbol table info available.
+#8  0x000056469e202ed1 in AP_Vehicle::setup() ()
+No symbol table info available.
+#9  0x000056469e2dbded in HAL_SITL::run(int, char* const*, AP_HAL::HAL::Callbacks*) const ()
+No symbol table info available.
+#10 0x000056469e12acc4 in main ()
+No symbol table info available.
+
+Thread 1 (Thread 0x7fd3a820c740 (LWP 50741) "arducopter"):
+#0  0x00007fd3a82fb3ea in __GI___wait4 (pid=50742, stat_loc=stat_loc@entry=0x7fff28538fa8, options=options@entry=0, usage=usage@entry=0x0) at ../sysdeps/unix/sysv/linux/wait4.c:30
+        sc_ret = -512
+        sc_ret = <optimized out>
+#1  0x00007fd3a82fb3ab in __GI___waitpid (pid=<optimized out>, stat_loc=stat_loc@entry=0x7fff28538fa8, options=options@entry=0) at ./posix/waitpid.c:38
+No locals.
+#2  0x00007fd3a8261bdb in do_system (line=<optimized out>) at ../sysdeps/posix/system.c:171
+        __result = <optimized out>
+        _cleanup_start_doit = true
+        _buffer = {__routine = 0x7fd3a8261c60 <cancel_handler>, __arg = 0x7fff28538fb0, __canceltype = 0, __prev = 0x0}
+        _cleanup_routine = 0x7fd3a8261c60 <cancel_handler>
+        cancel_args = {quit = 0x7fd3a842d7a0 <quit>, intr = 0x7fd3a842d840 <intr>, pid = 50742}
+        status = -1
+        ret = 0
+        pid = 50742
+        sa = {__sigaction_handler = {sa_handler = 0x1, sa_sigaction = 0x1}, sa_mask = {__val = {65536, 0, 0, 0, 0, 0, 0, 0, 0, 2141192192, 0, 18446744073709551615, 0, 18446744073709551615, 0, 18446744073709551615}}, sa_flags = 0, sa_restorer = 0x7fa00000ffffffff}
+        omask = {__val = {0, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 140733869954304, 3545519486840051143, 11891485935630518272, 140733869954304, 2}}
+        reset = {__val = {6, 199, 140733869953232, 94861302772297, 140733869953616, 140547036124314, 140733869953632, 140733869953472, 140737415839745, 140733869954304, 140733869954304, 140733869954304, 140733869954304, 140733869954379, 140733869954503, 140733869954304}}
+        spawn_attr = {__flags = 12, __pgrp = 0, __sd = {__val = {6, 199, 140733869953232, 94861302772297, 140733869953616, 140547036124314, 140733869953632, 140733869953472, 140737415839745, 140733869954304, 140733869954304, 140733869954304, 140733869954304, 140733869954379, 140733869954503, 140733869954304}}, __ss = {__val = {0, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 140733869954304, 3545519486840051143, 11891485935630518272, 140733869954304, 2}}, __sp = {sched_priority = 0}, __policy = 0, __pad = {0 <repeats 16 times>}}
+#3  0x000056469e2e298d in AP_HAL::run_command_on_ownpid(char const*) ()
+No symbol table info available.
+#4  0x000056469e2e2c96 in AP_HAL::panic(char const*, ...) ()
+No symbol table info available.
+#5  0x000056469e1ef33d in AP_Param::reload_defaults_file(bool) ()
+No symbol table info available.
+#6  0x000056469e1ef365 in AP_Param::load_all() ()
+No symbol table info available.
+#7  0x000056469e13775f in Copter::load_parameters() ()
+No symbol table info available.
+#8  0x000056469e202ed1 in AP_Vehicle::setup() ()
+No symbol table info available.
+#9  0x000056469e2dbded in HAL_SITL::run(int, char* const*, AP_HAL::HAL::Callbacks*) const ()
+No symbol table info available.
+#10 0x000056469e12acc4 in main ()
+No symbol table info available.
+A debugging session is active.
+
+	Inferior 1 [process 50741] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+[Inferior 1 (process 50741) detached]

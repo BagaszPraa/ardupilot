@@ -1,0 +1,12 @@
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007fd3a82fb3ea in __GI___wait4 (pid=50776, stat_loc=stat_loc@entry=0x7fff28538fa8, options=options@entry=0, usage=usage@entry=0x0) at ../sysdeps/unix/sysv/linux/wait4.c:30
+30	../sysdeps/unix/sysv/linux/wait4.c: No such file or directory.
+warning: target file /proc/50741/cmdline contained unexpected null characters
+Saved corefile ap-50777.core
+A debugging session is active.
+
+	Inferior 1 [process 50741] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+[Inferior 1 (process 50741) detached]
